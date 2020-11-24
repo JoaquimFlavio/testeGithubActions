@@ -3,7 +3,7 @@ name: myWorkflowTeste
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   my-job:
