@@ -7,9 +7,7 @@ on:
 
 jobs:
   my-job:
-    runs-on:
-    - ubuntu-latest
-    - macos-latest
+    runs-on: ubuntu-latest
     steps:
     - name: teste
       run: mkdir teste
