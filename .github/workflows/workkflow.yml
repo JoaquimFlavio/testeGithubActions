@@ -1,0 +1,13 @@
+name: myWorkflowTeste
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  my-job:
+    name: My job
+    steps:
+    - name: 123
+      run: mkdir teste
