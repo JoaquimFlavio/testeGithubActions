@@ -9,5 +9,5 @@ jobs:
   my-job:
     name: My job
     steps:
-    - name: 123
+    - name: teste
       run: mkdir teste
