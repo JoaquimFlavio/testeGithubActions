@@ -36,4 +36,4 @@ jobs:
       with:
         ACCESS_TOKEN: SECRET_VALUE
         BRANCH: main
-        FOLDER: generated-html
+        FOLDER: .
