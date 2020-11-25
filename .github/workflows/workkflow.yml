@@ -9,5 +9,7 @@ jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
     - name: teste
       run: ls -la
