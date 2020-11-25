@@ -2,6 +2,7 @@ name: myWorkflowTeste
 
 env:
   ymlFilepath: docs/api/my-asyncapi.yml
+  generatedPath: output/generated
   SUPER_SECRET: ${{ secrets.SECRET_NAME }}
 
 on:
@@ -29,7 +30,7 @@ jobs:
         template: '@asyncapi/html-template@0.15.4'  #In case of template from npm, because of @ it must be in quotes
         filepath: ${{ env.ymlFilepath }}
         parameters: baseHref=/test-experiment/ sidebarOrganization=byTags #space separated list of key/values
-        output: docs/api
+        output: ${{ generatedPath }}
         
     #Using another action that takes generated HTML and pushes it to GH Pages
     - name: Deploy GH page
