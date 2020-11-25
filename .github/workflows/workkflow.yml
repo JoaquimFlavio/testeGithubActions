@@ -19,7 +19,7 @@ jobs:
         template: '@asyncapi/html-template@0.15.4'  #In case of template from npm, because of @ it must be in quotes
         filepath: docs/api/my-asyncapi.yml
         parameters: baseHref=/test-experiment/ sidebarOrganization=byTags #space separated list of key/values
-        output: generated-html
+        output: generatedHTML
         
     #Using another action that takes generated HTML and pushes it to GH Pages
     - name: Deploy GH page
@@ -27,7 +27,7 @@ jobs:
       with:
         ACCESS_TOKEN: SECRET_VALUE
         BRANCH: main
-        FOLDER: generated-html
+        FOLDER: generatedHTML
     
     - name: teste
       run: ls -la
