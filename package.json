@@ -1,0 +1,28 @@
+{
+  "name": "testeGithubActions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoaquimFlavio/testeGithubActions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoaquimFlavio/testeGithubActions/issues"
+  },
+  "homepage": "https://github.com/JoaquimFlavio/testeGithubActions#readme",
+  "dependencies": {
+    "@asyncapi/generator": "^1.0.1",
+    "@asyncapi/html-template": "^0.15.4",
+    "@asyncapi/parser": "^1.2.0"
+  }
+}
