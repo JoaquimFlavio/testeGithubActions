@@ -14,14 +14,21 @@ jobs:
       uses: actions/checkout@v2
       
     #Using another action for AsyncAPI for validation
-    - name: Validating AsyncAPI document
-      uses: WaleedAshraf/asyncapi-github-action@v0
-      with:
-        filepath: docs/api/my-asyncapi.yml
+    # - name: Validating AsyncAPI document
+    #   uses: WaleedAshraf/asyncapi-github-action@v0
+    #   with:
+    #     filepath: docs/api/my-asyncapi.yml
 
     # Generate
-    - name: Generating Markdown from my AsyncAPI document
+    # - name: Generating Markdown from my AsyncAPI document
+    #   uses: asyncapi/github-action-for-generator@v1
+    - name: Generating HTML from my AsyncAPI document
       uses: asyncapi/github-action-for-generator@v1
+      with:
+        template: '@asyncapi/html-template@0.15.4'  #In case of template from npm, because of @ it must be in quotes
+        filepath: docs/api/my-asyncapi.yml
+        parameters: baseHref=/test-experiment/ sidebarOrganization=byTags #space separated list of key/values
+        output: generated-html
     
     #Using another action that takes generated HTML and pushes it to GH Pages
     - name: Deploy GH page
