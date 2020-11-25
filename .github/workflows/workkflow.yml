@@ -2,6 +2,7 @@ name: myWorkflowTeste
 
 env:
   ymlFilepath: docs/api/my-asyncapi.yml
+  SUPER_SECRET: ${{ secrets.SECRET_NAME }}
 
 on:
   push:
@@ -12,7 +13,7 @@ jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
-    #"standard step" where repo needs to be checked-out first
+    # "standard step" where repo needs to be checked-out first
     - name: Checkout repo
       uses: actions/checkout@v2
 
@@ -34,6 +35,6 @@ jobs:
     - name: Deploy GH page
       uses: JamesIves/github-pages-deploy-action@3.4.2
       with:
-        ACCESS_TOKEN: SECRET_VALUE
+        ACCESS_TOKEN: ${{ env.SUPER_SECRET }}
         BRANCH: main
         FOLDER: .
